@@ -1,0 +1,15 @@
+.marginL10{
+	margin-left: 10px;
+}
+
+.boxFoto {
+	margin-top: 20px;
+	display: none;
+}
+
+select {
+	padding: 5px 10px;
+    border-radius: 2px;
+    background-color: #fff;
+    cursor: pointer;
+}
