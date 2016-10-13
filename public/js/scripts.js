@@ -43,12 +43,20 @@ $("#formUploadFotoPipa").on('submit',(function(e){
 		contentType: false,
 		cache: false,
 		processData:false,
+		beforeSend: function() {
+			swal({
+				title: 'Aguarde...',
+				type: 'info',
+				showConfirmButton: false
+			});
+		},
 		success: function(retorno){
 			if (!retorno.status) {
 				alerta.exibir(retorno.erro, 'error');
 				return;
 			}
 
+			swal.close();
 			$('#boxFotoPipa')
 				.attr('src', '/img/' + retorno.foto)
 				.show();
